@@ -93,7 +93,7 @@ analytics:
 
 # Site Author
 author:
-  name             : ""
+  name             : "김은채"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "경상대학교 컴퓨터과학과 학부생"
   location         : 
