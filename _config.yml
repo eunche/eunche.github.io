@@ -274,9 +274,17 @@ defaults:
       path: ""
       type: posts
     values:
+      sidebar:
+        nav: "docs"
       show_date: true
       layout: single
-      author_profile: true
+      author_profile: false
       comments: true
       share: true
       related: true
+
+
+collections:
+  python:
+    output: true
+    permalink: /:python/:path/

@@ -1,12 +1,13 @@
-# main links
-main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+docs:
+  - title: 언어/프레임워크
+    children:
+      - title: "Python"
+        url: /python/
+      - title: "Django"
+        url: /django/
+      - title: "HTML/CSS"
+        url: /htmlcss/
+      - title: "Javascript/ES6"
+        url: /javascript/
+      - title: "React"
+        url: /React/
