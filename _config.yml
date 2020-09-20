@@ -11,8 +11,8 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme             : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default", # "air", "aqua", "contrast", , "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -94,9 +94,9 @@ analytics:
 # Site Author
 author:
   name             : "김은채"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpeg"
   bio              : "경상대학교 컴퓨터과학과 학부생"
-  location         : 
+  location         : "Republic of Korea, Jinju"
   email            :
   links:
     - label: "Email"
@@ -287,4 +287,4 @@ defaults:
 collections:
   python:
     output: true
-    permalink: /:python/:path/
+    permalink: /:collection/:path/

@@ -2,12 +2,12 @@ docs:
   - title: 언어/프레임워크
     children:
       - title: "Python"
-        url: /python/
+        url: /categories/#python/
       - title: "Django"
-        url: /django/
+        url: /categories/#django/
       - title: "HTML/CSS"
-        url: /htmlcss/
+        url: /categories/#htmlcss/
       - title: "Javascript/ES6"
-        url: /javascript/
+        url: /categories/#javascript/
       - title: "React"
-        url: /React/
+        url: /categories/#react/
