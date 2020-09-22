@@ -1,3 +1,4 @@
+
 .initial-image{
   background: url("/assets/images/banner-image.jpg") 100%/100% no-repeat;
   width: 100%;
@@ -5,6 +6,11 @@
   @include breakpoint(max-width 600px) {
     height: 180px;
   }
+}
+
+.archive__item-title a{
+  text-decoration-line: none;
+  color: #5b688e;
 }
 
 /* ==========================================================================
