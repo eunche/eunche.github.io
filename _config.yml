@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "김은채"
-  avatar           : #"/assets/images/bio-photo.jpeg"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : "웹 개발 관련 블로그입니다."
   location         : "Republic of Korea, Jinju"
   email            :
