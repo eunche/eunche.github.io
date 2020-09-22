@@ -23,7 +23,7 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    font-family: $sans-serif-narrow;
+    font-family: 'NanumSquare', sans-serif;
 
     @include breakpoint($x-large) {
       max-width: $max-width;
@@ -44,7 +44,7 @@
 }
 
 .site-title {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'NanumSquare', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

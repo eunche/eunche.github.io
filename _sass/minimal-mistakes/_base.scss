@@ -13,6 +13,25 @@
   color: #5b688e;
 }
 
+blockquote p {
+  line-height: 1.7;
+  font-size: 0.92rem !important;
+  color: gray;
+  font-style: normal;
+}
+
+.page__inner-wrap p.page__meta{
+  margin-bottom: 2.5rem;
+}
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5{
+  color: #6965aa;
+}
+
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
@@ -28,7 +47,7 @@ body {
   padding: 0;
   color: black;
   // font-family: $global-font-family;
-  font-family: 'Noto Sans JP', sans-serif !important;
+  font-family: 'NanumSquare', sans-serif !important;
   line-height: 1.5;
 
   &.overflow--hidden {
@@ -45,7 +64,7 @@ h5,
 h6 {
   margin: 2em 0 0.5em;
   line-height: 1.2;
-  font-family: $header-font-family;
+  font-family: 'NanumSquare', sans-serif;
   font-weight: bold;
 }
 
@@ -123,7 +142,7 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  margin: 2em 1em 2em 0;
+  margin: 1em 1em 1em 0;
   padding-left: 1em;
   padding-right: 1em;
   font-style: italic;
@@ -169,7 +188,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: $monospace;
+  font-family: 'NanumSquare', sans-serif;
 }
 
 pre {
@@ -280,7 +299,7 @@ figure {
 figcaption {
   margin-bottom: 0.5em;
   color: $muted-text-color;
-  font-family: $caption-font-family;
+  font-family: 'NanumSquare', sans-serif;
   font-size: $type-size-6;
 
   a {
