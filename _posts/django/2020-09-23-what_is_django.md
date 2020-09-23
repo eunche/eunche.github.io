@@ -25,7 +25,7 @@ categories:
 <br>
 <br>
 
-### 참고
+### 참고 자료
 * <a target="_blank" href="https://ko.wikipedia.org/wiki/%EC%9E%A5%EA%B3%A0_(%EC%9B%B9_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC)">위키백과 - 장고(웹 프레임워크)</a>
 * <a target="_blank" href="https://www.djangoproject.com/">Django 공식문서</a>
 
