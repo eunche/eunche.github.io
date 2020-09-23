@@ -13,11 +13,15 @@
   color: #5b688e;
 }
 
-blockquote p {
+blockquote * {
   line-height: 1.7;
   font-size: 0.92rem !important;
   color: #2d2d2d;
   font-style: normal;
+}
+
+blockquote em {
+  font-style: italic;
 }
 
 .page__inner-wrap p.page__meta{
@@ -43,6 +47,21 @@ blockquote p {
 
 .sidebar p{
   font-style: italic;
+}
+
+details {
+  background-color: #425077;
+  color: white;
+  padding: 0.3rem;
+  padding-left: 0.7rem;
+}
+
+summary {
+  outline: none;
+}
+
+details div {
+  padding-top: 2rem;
 }
 
 /* ==========================================================================
