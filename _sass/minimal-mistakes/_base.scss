@@ -64,6 +64,10 @@ details div {
   padding-top: 2rem;
 }
 
+pre.highlight {
+  word-spacing: 5px;
+}
+
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
@@ -193,6 +197,7 @@ blockquote {
 /* links */
 
 a {
+  text-decoration-line: none;
   &:focus {
     @extend %tab-focus;
   }
