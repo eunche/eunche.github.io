@@ -1,11 +1,11 @@
 ---
-title: "Django 프로젝트 셋팅"
+title: "Django 프로젝트 세팅"
 categories: 
   - "Django"
 ---
 
 ## 소개
-* Django 초기 셋팅 과정에 대해 소개 한다.
+* Django 초기 세팅 과정에 대해 소개 한다.
 * 본 게시글은 윈도우 bash shell 기준으로 작성 되었다.
 
 <br>
@@ -233,7 +233,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # 8. 커스텀 User 모델 설정(선택)
 
 > Django에서 기본 제공하는 User 모델이 있지만, 커스텀 User 모델을 사용할 수 있다   
-> 첫 migrate 이전에 커스텀 User 모델을 설정해야 오류가 나지 않기 때문에, Django 초기 셋팅 과정 글에 넣게 되었다
+> 첫 migrate 이전에 커스텀 User 모델을 설정해야 오류가 나지 않기 때문에, Django 초기 세팅 과정 글에 넣게 되었다
 
 ### 관련 포스트
 
