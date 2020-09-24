@@ -7,6 +7,7 @@ categories:
 ## 소개
 * Django 초기 세팅 과정에 대해 소개 한다.
 * 본 게시글은 윈도우 bash shell 기준으로 작성 되었다.
+* <a target="_blank" href="https://github.com/eunche/blog.django.example-project">Github Link</a>
 
 <br>
 
