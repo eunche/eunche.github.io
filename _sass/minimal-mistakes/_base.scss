@@ -68,6 +68,28 @@ pre.highlight {
   word-spacing: 5px;
 }
 
+.top_icon{
+  z-index: 100000;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.top_icon:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 500px){
+  .top_icon{
+    bottom: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
