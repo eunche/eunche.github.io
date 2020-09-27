@@ -35,7 +35,8 @@ class User(AbstractUser):
     pass
 ```
 
-> 상속받는 'AbstractUser'모델의 필드는
+> * User 모델의 비어있는 'pass' 부분에 추가하고 싶은 필드나, 메소드 등을 추가해 주자
+> * 상속받는 'AbstractUser'모델의 필드는
 >  username ,first_name ,last_name ,email ,is_staff   
 > 등이 있다
 
@@ -51,4 +52,4 @@ $ python manage.py migrate
 <br><br><br>
 
 #### 참고자료
-* 본 내용은 <a href="" target="_blank"><strong>'노마드 코더 에어비앤비 클론 코딩'</strong></a> 강의 내용을 토대로 작성되었습니다
+* 본 내용은 <a href="https://nomadcoders.co/airbnb-clone" target="_blank"><strong>'노마드 코더 에어비앤비 클론 코딩'</strong></a> 강의 내용을 토대로 작성되었습니다
