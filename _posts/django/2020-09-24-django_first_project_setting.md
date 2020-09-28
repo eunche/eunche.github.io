@@ -238,7 +238,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 ### 관련 포스트
 
-* <a target="_blank" href="#">추후 포스팅 예정</a>
+* <a target="_blank" href="https://eunche.github.io/django/django_custom_user_model/">Django 커스텀 User 모델</a>
 
 <br><br><br>
 
