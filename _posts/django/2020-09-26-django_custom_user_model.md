@@ -51,5 +51,5 @@ $ python manage.py migrate
 
 <br><br><br>
 
-#### 참고자료
+#### 참고 자료
 * 본 내용은 <a href="https://nomadcoders.co/airbnb-clone" target="_blank"><strong>'노마드 코더 에어비앤비 클론 코딩'</strong></a> 강의 내용을 토대로 작성되었습니다
