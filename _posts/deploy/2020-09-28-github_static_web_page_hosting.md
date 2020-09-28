@@ -91,6 +91,6 @@ categories:
 <br><br><br>
 
 #### 참고 자료
-* <a href="https://ko.wikipedia.org/wiki/%EA%B9%83%ED%97%88%EB%B8%8C" target="_blank">위키백과 깃허브</a>
+* <a href="https://ko.wikipedia.org/wiki/%EA%B9%83%ED%97%88%EB%B8%8C" target="_blank">위키백과 - 깃허브</a>
 * <a href="https://titus94.tistory.com/4" target="_blank">Titus `열정의 공간 블로그</a>
 * <a href="https://hogni.tistory.com/75" target="_blank">빠른손김참치 블로그</a>
