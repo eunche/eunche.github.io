@@ -7,7 +7,7 @@ categories:
 <a href="">(1) - AWS EB(Elastic Beanstalk)에 Django 배포</a><br>
 (2) - AWS EB(Elastic Beanstalk) Django 배포 오류 해결<strong>(포스팅 예정)</strong><br>
 (3) - AWS EB(Elastic Beanstalk) Django와 RDS(PostgreSQL) 연결<strong>(포스팅 예정)</strong><br>
-(4) - AWS EB(Elastic Beanstalk) Django static파일 AWS S3에 분리<strong>(포스팅 예정)</strong><br>
+(4) - AWS EB(Elastic Beanstalk) Django Static/Media파일 AWS S3에 분리<strong>(포스팅 예정)</strong><br>
 
 <br><br><br>
 
@@ -183,7 +183,7 @@ $ eb deploy django-eb-env
 <br>
 
 ```bash
-eb open
+$ eb open
 ```
 
 > 최종적으로, AWS EB를 통해 배포된 Django 웹페이지를 확인할 수 있다
