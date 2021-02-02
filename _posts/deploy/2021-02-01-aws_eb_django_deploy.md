@@ -35,7 +35,7 @@ $ pip install django==2.1.5
 
 > Elastic Beanstalk Python 3.6 플랫폼과 호환 가능한 최신의 Django 버전은 2.1이기 때문에 Django 버전을 알맞게 설치 해주자
 
-<img src="/assets/images/2021-02-01-aws_eb_django_deploy/first_project.JPG">
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/first_project.JPG">
 
 
 <br><br><br>

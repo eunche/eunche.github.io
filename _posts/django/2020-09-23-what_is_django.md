@@ -18,7 +18,7 @@ categories:
 <br>
 
 # Django의 슬로건
-<img src="/assets/images/2020-09-23-what_is_django/slogan1.JPG">
+<img src="/assets/images/django/2020-09-23-what_is_django/slogan1.JPG">
 
 > <em>"Django는 웹 개발의 번거 로움을 상당 부분 처리하므로 바퀴를 다시 만들 필요 없다."</em>
 

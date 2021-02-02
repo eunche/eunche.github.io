@@ -62,7 +62,7 @@ $ django-admin startproject config .
 
 ##### 프로젝트 구조
 
-<img src="/assets/images/2020-09-24-django_first_project_setting/directory1.JPG">
+<img src="/assets/images/django/2020-09-24-django_first_project_setting/directory1.JPG">
 
 <br><br><br>
 
@@ -203,7 +203,7 @@ import os
 
 ##### 프로젝트 구조
 
-<img src="/assets/images/2020-09-24-django_first_project_setting/directory2.JPG">
+<img src="/assets/images/django/2020-09-24-django_first_project_setting/directory2.JPG">
 
 <br><br><br>
 
@@ -227,7 +227,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 ##### 프로젝트 구조
 
-<img src="/assets/images/2020-09-24-django_first_project_setting/directory3.JPG">
+<img src="/assets/images/django/2020-09-24-django_first_project_setting/directory3.JPG">
 
 <br><br><br>
 
@@ -252,4 +252,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # 최종 프로젝트 구조
 
-<img src="/assets/images/2020-09-24-django_first_project_setting/directory4.JPG">
+<img src="/assets/images/django/2020-09-24-django_first_project_setting/directory4.JPG">

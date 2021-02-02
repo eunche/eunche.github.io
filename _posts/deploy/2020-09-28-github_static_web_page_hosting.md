@@ -13,7 +13,7 @@ categories:
 
 # 정적 웹 페이지란?
 
-<img src="/assets/images/2020-09-28-github_static_web_page_hosting/static_web_page.png">
+<img src="/assets/images/deploy/2020-09-28-github_static_web_page_hosting/static_web_page.png">
 
 > 웹 서버에 미리 저장된 파일들(HTML, img, Javascript 파일 등)이 그대로 사용자에게 전달되어 보여지는 웹 페이지이다.
 
@@ -25,7 +25,7 @@ categories:
 
 * <a href="https://github.com/" target="_blank">https://github.com/</a>
 
-<img src="/assets/images/2020-09-28-github_static_web_page_hosting/github_signup.JPG">
+<img src="/assets/images/deploy/2020-09-28-github_static_web_page_hosting/github_signup.JPG">
 
 > 위 항목을 다 채운 후 가입해 주자
 
@@ -54,7 +54,7 @@ categories:
 
 <br>
 
-<img src="/assets/images/2020-09-28-github_static_web_page_hosting/upload.png">
+<img src="/assets/images/deploy/2020-09-28-github_static_web_page_hosting/upload.png">
 
 > 1. <strong style="color:#0366d6">uploading an existing file</strong> 클릭   
 > 2. 파일 드래그 or 파일 선택을 통해 파일들을 업로드   
@@ -64,19 +64,19 @@ categories:
 
 ## 4. Github Pages 설정
 
-<img src="/assets/images/2020-09-28-github_static_web_page_hosting/setting.png">
+<img src="/assets/images/deploy/2020-09-28-github_static_web_page_hosting/setting.png">
 
 > <strong>Settings</strong> 항목을 클릭
 
 <br>
 
-<img src="/assets/images/2020-09-28-github_static_web_page_hosting/github_pages.png">
+<img src="/assets/images/deploy/2020-09-28-github_static_web_page_hosting/github_pages.png">
 
 > <strong>None</strong> 을 클릭하여 master(or base)로 변경
 
 <br>
 
-<img src="/assets/images/2020-09-28-github_static_web_page_hosting/result_page.png">
+<img src="/assets/images/deploy/2020-09-28-github_static_web_page_hosting/result_page.png">
 
 > 호스팅에 소요되는 0~2분 후에 링크를 들어가면, 웹 페이지가 정상적으로 작동하게 된다
 
