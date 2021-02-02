@@ -1,11 +1,18 @@
 ---
-title: "AWS EB(Elastic Beanstalk)에 Django 배포하기"
+title: "AWS EB(Elastic Beanstalk)에 Django 배포"
 categories: 
   - "Deploy"
 ---
 
+<a href="">(1) - AWS EB(Elastic Beanstalk)에 Django 배포</a><br>
+(2) - AWS EB(Elastic Beanstalk) Django 배포 오류 해결<strong>(포스팅 예정)</strong><br>
+(3) - AWS EB(Elastic Beanstalk) Django와 RDS(PostgreSQL) 연결<strong>(포스팅 예정)</strong><br>
+(4) - AWS EB(Elastic Beanstalk) Django static파일 AWS S3에 분리<strong>(포스팅 예정)</strong><br>
+
+<br><br><br>
+
 ## 소개
-* Django 2.1.5버전 사용
+* Django 2.1.5 버전 사용
 * Python3 venv 모듈 사용
 * Windows 10 환경
 * bash shell 기준으로 작성
@@ -160,7 +167,26 @@ $ eb status
 ALLOWED_HOSTS = ['127.0.0.1', 'django-eb-env.eba-t23rma5a.ap-northeast-2.elasticbeanstalk.com']
 ```
 
+<br><br><br>
 
+
+## 8. 애플리케이션 배포
+
+* 배포 준비가 다 되었다면, 변경 사항들을 전부 commit 해주고 아래 명령어를 입력 해주자
+
+```bash
+$ eb deploy django-eb-env
+```
+
+> eb deploy "\<환경 이름\>"
+
+<br>
+
+```bash
+eb open
+```
+
+> 최종적으로, AWS EB를 통해 배포된 Django 웹페이지를 확인할 수 있다
 
 
 
