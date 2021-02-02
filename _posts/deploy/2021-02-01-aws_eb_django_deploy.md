@@ -28,6 +28,8 @@ categories:
 ## 1. Django 프로젝트를 github에 업로드
 
 <em style="color:gray;">- AWS EB를 통해 배포 할 때, git을 사용하게 되면 최신 커밋이 배포 된다.</em>
+<br>
+<em style="color:gray;">&nbsp;(변경사항이 생길때마다 commmit을 작성 해주어야 한다)</em>
 
 ```bash
 $ pip install django==2.1.5
@@ -35,13 +37,17 @@ $ pip install django==2.1.5
 
 > Elastic Beanstalk Python 3.6 플랫폼과 호환 가능한 최신의 Django 버전은 2.1이기 때문에 Django 버전을 알맞게 설치 해주자
 
-<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/first_project.JPG">
+<br>
 
+#### (프로젝트 구조)
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/first_project.JPG">
 
 <br><br><br>
 
 
-## 2. Elastic Beanstalk CLi 설치
+## 2. Elastic Beanstalk CLI 설치
+
+* 특정 프로젝트에서만 사용될게 아니므로, 가상환경이 꺼진상태에서 설치 해주었다
 
 ```bash
 $ pip install awsebcli --upgrade --user
@@ -50,8 +56,117 @@ $ pip install awsebcli --upgrade --user
 <br><br><br>
 
 
+## 3. EB 배포를 위한 셋팅
+
+<em style="color: gray ;font-weight:normal;">(가상환경이 켜진 상태)</em>
+
+```bash
+$ pip freeze > requirements.txt
+```
+> EB를 통해 배포될 때 EC2에 설치될 패키지를 requirements.txt에 작성 하였다
+
+<br><br><br>
+
+
+## 4. WSGIPath설정을 위한 구성 파일 추가
+
+* (.ebextensions/django.config)
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/wsgipath.png">
+
+<br><br><br>
+
+
+## 5. IAM 사용자 추가
+
+* <strong>IAM 사용자</strong> : (Django)애플리케이션에 AWS계정의 리소스 접근을 권한을 받은 것
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam1.png">
+
+<br><br>
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam2.png">
+
+<br><br>
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam3.png">
+
+> <strong>AdminstratorAccess</strong>를 설정 하면, 모든 권한을 갖게 된다
+
+<br>
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam4.png">
+
+> IAM 사용자를 만들게 되면 생성되는 액세스 키 ID와 PASSWORD는 절대 유출되어선 안되며, 따로 작성해두거나 .csv파일로 보관하자
+
+<br><br><br>
+
+
+## 6. EB Application 생성
+
+* <strong>EB Application</strong> : 웹 앱을 실행하는 환경, 웹 앱의 소스 코드 버전, 저장된 구성, 로그 및 Elastic Beanstalk를 사용하는 동안 생성한 기타 데이터의 컨테이너 역할
+
+```bash
+$ eb init
+```
+
+<br>  
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/region.png">
+
+> 서비스가 될 지역을 10번, Seoul로 고른 상태
+
+<br><br>
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/createapp.png">
+
+> * EB Application을 생성
+> * IAM 사용자가 등록 되있지 않다면, 아까 받았던 access ID, PASSWORD를 입력 한다
+
+<br>
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/pythonset.png">
+
+> * 본 예제에서는 꼭 'Python 3.6 ... Amazon Linux' (2)번 옵션으로 선택 해주자
+
+<br><br>
+
+
+## 7. EB Environment 생성
+
+* <strong>EB Environment</strong> : 애플리케이션 버전을 실행 중인 AWS 리소스 모음(EC2, LoadBalancer, Security Group 등)
+
+```bash
+$ eb create django-eb-env
+```
+
+> eb create "\<환경 이름\>"
+
+<br>
+
+```bash
+$ eb status
+```
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/status.png">
+
+> 도메인별명(CNAME)을 받아 ALLOWED_HOST에 추가 해주자
+
+<br>
+
+* (settings.py)
+
+```
+ALLOWED_HOSTS = ['127.0.0.1', 'django-eb-env.eba-t23rma5a.ap-northeast-2.elasticbeanstalk.com']
+```
+
+
+
+
 
 #### 참고 자료
 * <a href="https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/Welcome.html" target="_blank">AWS EB - EB란?</a>
 * <a href="https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb3-cli-git.html" target="_blank">AWS EB - EB CLI와 Git 사용</a>
 * <a href="https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/create-deploy-python-django.html" target="_blank">AWS EB - Elastic Beanstalk에 Django 애플리케이션 배포</a>
+* <a href="https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/introduction.html" target="_blank">AWS IAM</a>
+
