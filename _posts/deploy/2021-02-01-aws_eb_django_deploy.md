@@ -16,6 +16,7 @@ categories:
 * Python3 venv 모듈 사용
 * Windows 10 환경
 * bash shell 기준으로 작성
+* <a target="_blank" href="https://github.com/eunche/blog-code/tree/master/aws-eb-django-deploy">Github Link</a>
 
 <br><br><br>
 
