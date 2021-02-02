@@ -189,6 +189,8 @@ $ eb open
 > 최종적으로, AWS EB를 통해 배포된 Django 웹페이지를 확인할 수 있다
 
 
+<br><br>
+
 
 #### 참고 자료
 * <a href="https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/Welcome.html" target="_blank">AWS EB - EB란?</a>
