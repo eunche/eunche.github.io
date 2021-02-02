@@ -4,7 +4,7 @@ categories:
   - "Deploy"
 ---
 
-<a href="">(1) - AWS EB(Elastic Beanstalk)에 Django 배포</a><br>
+<a href="https://eunche.github.io/deploy/aws_eb_django_deploy/">(1) - AWS EB(Elastic Beanstalk)에 Django 배포</a><br>
 (2) - AWS EB(Elastic Beanstalk) Django 배포 오류 해결<strong>(포스팅 예정)</strong><br>
 (3) - AWS EB(Elastic Beanstalk) Django와 RDS(PostgreSQL) 연결<strong>(포스팅 예정)</strong><br>
 (4) - AWS EB(Elastic Beanstalk) Django Static/Media파일 AWS S3에 분리<strong>(포스팅 예정)</strong><br>
@@ -20,7 +20,7 @@ categories:
 
 <br><br><br>
 
-# AWS Elastic Beanstalk이란?
+# AWS Elastic Beanstalk 이란?
 
 > * 배포 과정을 잘 알지 못해도 웹 애플리케이션을 신속하게 배포하고 관리하게 해주는 서비스이다.
 > * Elastic Beanstalk에 대한 추가 비용은 없고, EC2(클라우드 컴퓨팅 서비스)와 같은 기본 리소스에 대한 비용만 지불하면 된다.
@@ -35,15 +35,15 @@ categories:
 
 ## 1. Django 프로젝트를 github에 업로드
 
-<em style="color:gray;">- AWS EB를 통해 배포 할 때, git을 사용하게 되면 최신 커밋이 배포 된다.</em>
+<em style="color:gray;">- AWS EB를 통해 배포 할때, git을 사용하게 되면 최신 커밋이 배포된다.</em>
 <br>
-<em style="color:gray;">&nbsp;(변경사항이 생길때마다 commmit을 작성 해주어야 한다)</em>
+<em style="color:gray;">&nbsp;(변경사항이 생길 때마다 commmit을 작성해 주어야 한다)</em>
 
 ```bash
 $ pip install django==2.1.5
 ```
 
-> Elastic Beanstalk Python 3.6 플랫폼과 호환 가능한 최신의 Django 버전은 2.1이기 때문에 Django 버전을 알맞게 설치 해주자
+> Elastic Beanstalk Python 3.6 플랫폼과 호환 가능한 최신의 Django 버전은 2.1이기 때문에 Django 버전을 알맞게 설치해 주자
 
 <br>
 
@@ -55,7 +55,7 @@ $ pip install django==2.1.5
 
 ## 2. Elastic Beanstalk CLI 설치
 
-* 특정 프로젝트에서만 사용될게 아니므로, 가상환경이 꺼진상태에서 설치 해주었다
+* 특정 프로젝트에서만 사용될 게 아니므로, 가상환경이 꺼진 상태에서 설치해 주었다
 
 ```bash
 $ pip install awsebcli --upgrade --user
@@ -64,19 +64,19 @@ $ pip install awsebcli --upgrade --user
 <br><br><br>
 
 
-## 3. EB 배포를 위한 셋팅
+## 3. requirements.txt 작성
 
 <em style="color: gray ;font-weight:normal;">(가상환경이 켜진 상태)</em>
 
 ```bash
 $ pip freeze > requirements.txt
 ```
-> EB를 통해 배포될 때 EC2에 설치될 패키지를 requirements.txt에 작성 하였다
+> EB를 통해 배포될 때 EC2에 설치될 패키지를 requirements.txt에 작성하였다
 
 <br><br><br>
 
 
-## 4. WSGIPath설정을 위한 구성 파일 추가
+## 4. WSGIPath 설정을 위한 구성 파일 추가
 
 * (.ebextensions/django.config)
 
@@ -87,7 +87,7 @@ $ pip freeze > requirements.txt
 
 ## 5. IAM 사용자 추가
 
-* <strong>IAM 사용자</strong> : (Django)애플리케이션에 AWS계정의 리소스 접근을 권한을 받은 것
+* <strong>IAM 사용자</strong> : (Django)애플리케이션에 AWS 계정의 리소스 접근을 권한을 받은 것
 
 <img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam1.png">
 
@@ -99,7 +99,7 @@ $ pip freeze > requirements.txt
 
 <img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam3.png">
 
-> <strong>AdminstratorAccess</strong>를 설정 하면, 모든 권한을 갖게 된다
+> <strong>AdminstratorAccess</strong>를 설정하면, 모든 권한을 갖게 된다
 
 <br>
 
@@ -129,13 +129,13 @@ $ eb init
 <img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/createapp.png">
 
 > * EB Application을 생성
-> * IAM 사용자가 등록 되있지 않다면, 아까 받았던 access ID, PASSWORD를 입력 한다
+> * IAM 사용자가 등록돼있지 않다면, 아까 받았던 access ID, PASSWORD를 입력한다
 
 <br>
 
 <img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/pythonset.png">
 
-> * 본 예제에서는 꼭 'Python 3.6 ... Amazon Linux' (2)번 옵션으로 선택 해주자
+> * 본 예제에서는 꼭 'Python 3.6 ... Amazon Linux' (2)번 옵션으로 선택해 주자
 
 <br><br>
 
@@ -158,7 +158,7 @@ $ eb status
 
 <img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/status.png">
 
-> 도메인별명(CNAME)을 받아 ALLOWED_HOST에 추가 해주자
+> 도메인 별명(CNAME)을 받아 ALLOWED_HOST에 추가해 주자
 
 <br>
 
@@ -173,7 +173,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'django-eb-env.eba-t23rma5a.ap-northeast-2.elastic
 
 ## 8. 애플리케이션 배포
 
-* 배포 준비가 다 되었다면, 변경 사항들을 전부 commit 해주고 아래 명령어를 입력 해주자
+* 배포 준비가 다 되었다면, 변경 사항들을 전부 commit 해주고 아래 명령어를 입력해 주자
 
 ```bash
 $ eb deploy django-eb-env
