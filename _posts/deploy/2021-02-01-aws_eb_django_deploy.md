@@ -80,7 +80,7 @@ $ pip freeze > requirements.txt
 
 * (.ebextensions/django.config)
 
-<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/wsgipath.png">
+<img style="max-height: 300px;" src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/wsgipath.png">
 
 <br><br><br>
 
@@ -89,15 +89,15 @@ $ pip freeze > requirements.txt
 
 * <strong>IAM 사용자</strong> : (Django)애플리케이션에 AWS 계정의 리소스 접근을 권한을 받은 것
 
-<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam1.png">
+<img style="max-height: 400px;" src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam1.png">
 
 <br><br>
 
-<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam2.png">
+<img style="max-height: 400px;" src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam2.png">
 
 <br><br>
 
-<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam3.png">
+<img style="max-height: 400px;" src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/iam3.png">
 
 > <strong>AdminstratorAccess</strong>를 설정하면, 모든 권한을 갖게 된다
 
@@ -180,6 +180,18 @@ $ eb deploy django-eb-env
 ```
 
 > eb deploy "\<환경 이름\>"
+
+<br>
+
+#### (WSGI Path 에러가 났을 경우)
+
+
+<img src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/changewsgi.png">
+
+<img style="max-height: 300px;" src="/assets/images/deploy/2021-02-01-aws_eb_django_deploy/changewsgi2.png">
+
+> * <a href="https://ap-northeast-2.console.aws.amazon.com/elasticbeanstalk" target="_blank">https://ap-northeast-2.console.aws.amazon.com/elasticbeanstalk</a><br>
+> 위 링크로 들어가서 WSGI Path를 직접 설정해 주자
 
 <br>
 
