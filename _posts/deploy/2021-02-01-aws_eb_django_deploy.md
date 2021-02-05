@@ -37,7 +37,7 @@ categories:
 
 <em style="color:gray;">- AWS EB를 통해 배포 할때, git을 사용하게 되면 최신 커밋이 배포된다.</em>
 <br>
-<em style="color:gray;">&nbsp;(변경사항이 생길 때마다 commmit을 작성해 주어야 한다)</em>
+<em style="color:gray;">&nbsp;(변경사항이 생길 때마다 commit을 작성해 주어야 한다)</em>
 
 ```bash
 $ pip install django==2.1.5
